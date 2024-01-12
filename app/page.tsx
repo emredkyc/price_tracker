@@ -1,3 +1,4 @@
+import Searchbar from "@/components/Searchbar";
 import Image from "next/image";
 
 const Home = async () => {
@@ -26,7 +27,8 @@ const Home = async () => {
               Powerful, self-serve product and growth analytics to help you
               convert, engage, and retain more.
             </p>
-
+            
+            <Searchbar />
           </div>
 
         </div>
