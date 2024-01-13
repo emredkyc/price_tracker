@@ -1,3 +1,4 @@
+import HeroCarousel from "@/components/HeroCarousel";
 import Searchbar from "@/components/Searchbar";
 import Image from "next/image";
 
@@ -31,6 +32,7 @@ const Home = async () => {
             <Searchbar />
           </div>
 
+          <HeroCarousel />
         </div>
       </section>
 
