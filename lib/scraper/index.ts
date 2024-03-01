@@ -1,4 +1,4 @@
-"use server"
+"use server";
 
 import axios from "axios";
 import * as cheerio from "cheerio";
@@ -56,7 +56,7 @@ export async function scrapeAmazonProduct(url: string) {
     const imageUrls = Object.keys(JSON.parse(images));
 
     const currency = extractCurrency($(".a-price-symbol"));
-    // const discountRate = $(".savingsPercentage").text().replace(/[-%]/g, "");
+    const discountRate = $(".savingsPercentage").text().replace(/[-%]/g, "");
 
     const description = extractDescription($);
 
@@ -69,7 +69,7 @@ export async function scrapeAmazonProduct(url: string) {
       currentPrice: Number(currentPrice) || Number(originalPrice),
       originalPrice: Number(originalPrice) || Number(currentPrice),
       priceHistory: [],
-    //   discountRate: Number(discountRate),
+      discountRate: Number(discountRate),
       category: "category",
       reviewsCount: 100,
       stars: 4.5,
